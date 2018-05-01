@@ -1,0 +1,75 @@
+body {
+	padding-top: 30px;
+	text-align: center;
+	font-size: 40px;
+	font-family: sans-serif;
+	font-weight: normal;
+	text-transform: uppercase;
+	color: white;
+	-webkit-font-smoothing: antialiased;
+	letter-spacing: 1px;
+}
+
+img {
+	max-width: 100%;
+	display: block;
+	align-self: center
+}
+
+.gallery {
+	display: flex;
+	justify-content: space-between;
+}
+
+section {
+	width: 32%;
+	position: relative;
+	cursor: pointer;
+}
+
+.background-overlay {
+  background-color: rgba(0, 0, 0, .7);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  transition: all 0.5s ease-in-out;
+}
+
+/* ---------------------------------------------------------
+    YOUR CODE HERE
+  ---------------------------------------------------------- */
+
+.modal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  /* add CSS to position the modal over the browser window */
+  position: fixed;
+
+  /* what is the default position of the modal? */
+  /* add CSS to move it */
+  transform: translateY(-100%);
+
+  /*add CSS to make the transition smooth*/
+  transition: all 0.5s ease-in-out;
+}
+
+/* create a class that represents the 'open' state of the modal */
+/* toggle this class using jQuery based on user interaction */
+
+.open {
+  overflow-y: hidden;
+}
+
+.open .modal {
+  transform: translateY(0%);
+  z-index: 1;
+}
